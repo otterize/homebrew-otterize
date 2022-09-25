@@ -5,21 +5,21 @@
 class OtterizeCli < Formula
   desc "Otterize CLI"
   homepage "https://github.com/otterize/otterize-cli"
-  version "0.1.3"
+  version "0.1.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.3/otterize-cli_0.1.3_macOS_x86_64.tar.gz"
-      sha256 "3fde917316e9390d8f475195ef2d2d7531b230c2afeb4edb55d2ab6921f45247"
+    if Hardware::CPU.arm?
+      url "https://get.otterize.com/otterize-cli/v0.1.4/otterize-cli_0.1.4_macOS_arm64.tar.gz"
+      sha256 "59c51ec8c63066be4dbb0ae713d111d9bdf53e4ece7acdb2b46f8e097e6abcb4"
 
       def install
         bin.install "otterize"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://get.otterize.com/otterize-cli/v0.1.3/otterize-cli_0.1.3_macOS_arm64.tar.gz"
-      sha256 "a73b19275b599faedcc539dd6add47210945c6b5beeb89c2b97ebbcc3f15922f"
+    if Hardware::CPU.intel?
+      url "https://get.otterize.com/otterize-cli/v0.1.4/otterize-cli_0.1.4_macOS_x86_64.tar.gz"
+      sha256 "c84bc790143f111ad7c772d57e315e18395e244bc85d7414dfb85e22ccb2de45"
 
       def install
         bin.install "otterize"
@@ -28,17 +28,17 @@ class OtterizeCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.otterize.com/otterize-cli/v0.1.3/otterize-cli_0.1.3_Linux_arm64.tar.gz"
-      sha256 "7ecd84ebecf7d45be6c46f9004cd470bdc3eff0b6146016f1ebdd8a5902cdddc"
+    if Hardware::CPU.intel?
+      url "https://get.otterize.com/otterize-cli/v0.1.4/otterize-cli_0.1.4_Linux_x86_64.tar.gz"
+      sha256 "34a70e807fff21c357fd0e16ef3673da34839572c12fe47e32163544f3b7e5b3"
 
       def install
         bin.install "otterize"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.3/otterize-cli_0.1.3_Linux_x86_64.tar.gz"
-      sha256 "9f864dd0ac9747a1613d3ad0bde66980157e0152755daad89f208b94f9470c13"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://get.otterize.com/otterize-cli/v0.1.4/otterize-cli_0.1.4_Linux_arm64.tar.gz"
+      sha256 "42e113b89e6f3868d515fa3ff7f296307677b71c496da94f374b2e066373b2cc"
 
       def install
         bin.install "otterize"
