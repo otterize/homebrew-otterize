@@ -1,2 +1,2 @@
 # Homebrew for Otterize CLI
-Homebrew formulas for Otterize CLI
+Otterize CLI homebrew formulas repository
