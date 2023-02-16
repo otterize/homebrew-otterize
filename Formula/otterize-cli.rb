@@ -5,21 +5,21 @@
 class OtterizeCli < Formula
   desc "Otterize CLI"
   homepage "https://github.com/otterize/otterize-cli"
-  version "0.1.13"
+  version "0.1.14"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.13/otterize_macOS_x86_64_notarized.zip"
-      sha256 "41159798b53d263b37eb80cbca91aa63d9b0298991ca99d622e4ac04400fbdda"
+    if Hardware::CPU.arm?
+      url "https://get.otterize.com/otterize-cli/v0.1.14/otterize_macOS_arm64_notarized.zip"
+      sha256 "a6aaa1b626a6dea308491c5523ec8f1748847fef147b658e5894ee18aab49674"
 
       def install
         bin.install "otterize"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://get.otterize.com/otterize-cli/v0.1.13/otterize_macOS_arm64_notarized.zip"
-      sha256 "65a57b015d2e41abffe9e6d3c5902d8cbc36b372b37b525dc26b628477dfaa23"
+    if Hardware::CPU.intel?
+      url "https://get.otterize.com/otterize-cli/v0.1.14/otterize_macOS_x86_64_notarized.zip"
+      sha256 "b12a362378f080acb2106d978f9ea84c6029eaed038e67417a703fc509d6e7fc"
 
       def install
         bin.install "otterize"
@@ -29,16 +29,16 @@ class OtterizeCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.otterize.com/otterize-cli/v0.1.13/otterize_Linux_arm64.tar.gz"
-      sha256 "f4391f18bd53401d9fb6e8e4f121438996d3317df5aaef548a36a0bea34665ee"
+      url "https://get.otterize.com/otterize-cli/v0.1.14/otterize_Linux_arm64.tar.gz"
+      sha256 "f59cb32f076381a601151a93d5c9c76387d1bee0d87c12555a60ce09846cb5e9"
 
       def install
         bin.install "otterize"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.13/otterize_Linux_x86_64.tar.gz"
-      sha256 "957a859466f778f8e89966e10487d5ab169741b445b5d9490fcba4eabd73c7c3"
+      url "https://get.otterize.com/otterize-cli/v0.1.14/otterize_Linux_x86_64.tar.gz"
+      sha256 "a2294849cd4a2aaa60bc0a5b0623a571ddab9f8af9d169726ef0b03aad1c92af"
 
       def install
         bin.install "otterize"
