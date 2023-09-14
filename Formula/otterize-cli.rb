@@ -5,21 +5,21 @@
 class OtterizeCli < Formula
   desc "Otterize CLI"
   homepage "https://github.com/otterize/otterize-cli"
-  version "0.1.29"
+  version "0.1.30"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://get.otterize.com/otterize-cli/v0.1.29/otterize_darwin_arm64.zip"
-      sha256 "e4f8d8bfff5f0f236974343b3c97d4f93200c304d80901049366d52f40346948"
+      url "https://get.otterize.com/otterize-cli/v0.1.30/otterize_darwin_arm64.zip"
+      sha256 "fe9fb42c5e8027b09f7862253ff230518e3099d684385e9b5c6bb75ee91dc0e1"
 
       def install
         bin.install "otterize"
       end
     end
     if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.29/otterize_darwin_x86_64.zip"
-      sha256 "7ed093158dca05a9e469d9481842803f9b53651a424c933dcd79ffe45ad1bab0"
+      url "https://get.otterize.com/otterize-cli/v0.1.30/otterize_darwin_x86_64.zip"
+      sha256 "68311c0e89d70f9b0c5b125265135b8ce07d942cdb8cad59b2d194b7f4fcdf25"
 
       def install
         bin.install "otterize"
@@ -29,8 +29,8 @@ class OtterizeCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://get.otterize.com/otterize-cli/v0.1.29/otterize_linux_x86_64.tar.gz"
-      sha256 "6e3f4e0a044d034423eea6898ace4b26133102eda23b1341f80f2a8fe10d6e87"
+      url "https://get.otterize.com/otterize-cli/v0.1.30/otterize_linux_x86_64.tar.gz"
+      sha256 "bbf6d3bbfe5efc75c6cf29adc278f6cc36408e1ca700ceffd6145c3815537a8c"
 
       def install
         bin.install "otterize"
